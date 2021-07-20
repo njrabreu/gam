@@ -1,0 +1,56 @@
+
+#games {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#games td, #games th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#games tr:nth-child(even){background-color: #f2f2f2;}
+
+#games tr:hover {background-color: #ddd;}
+
+#games th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=date], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* This overrides BootStrap styling - so I can color my button with green */
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

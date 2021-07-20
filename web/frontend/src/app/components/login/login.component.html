@@ -1,0 +1,19 @@
+<div class="container">
+	<form [formGroup]="loginform" (ngSubmit)="tryLogin()" novalidate>
+		<div class="form-group">
+			<label>ID</label>
+			<input type="text" class="form-control" formControlName="login" required autofocus (ngModelChange)="clearLabel()" />
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<input type="password" class="form-control" formControlName="password" (ngModelChange)="clearLabel()" />
+		</div>
+		<button type="submit" [disabled]="!loginform.valid" class="btn btn-primary">Login</button>
+		<div style="text-align:center" *ngIf="loginform.valid">
+			<a [routerLink]="" (click)="registerLogin()">Register</a>
+		</div>
+		<div *ngIf="validMessage != ''">
+			<h4 style="text-align: center; color: red" class="has-info">{{validMessage}}</h4>
+		</div>
+	</form>
+</div>
