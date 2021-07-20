@@ -1,0 +1,31 @@
+use gamemanager;
+
+truncate table status;
+insert into status (Description) select 'Completed';
+insert into status (Description) select 'Started';
+insert into status (Description) select 'Not Going to Play';
+insert into status (Description) select 'Wanted';
+insert into status (Description) select 'Not Started';
+
+truncate table platform;
+insert into platform (Description) select 'Steam';
+insert into platform (Description) select 'Origin';
+insert into platform (Description) select 'GOG';
+insert into platform (Description) select 'Uplay';
+insert into platform (Description) select 'Epic Games';
+insert into platform (Description) select 'Rockstar Club';
+insert into platform (Description) select 'Battle .Net';
+insert into platform (Description) select 'PS4';
+
+truncate table rate;
+insert into rate (Description) select 'Very Good';
+insert into rate (Description) select 'Good';
+insert into rate (Description) select 'Medium';
+insert into rate (Description) select 'Awful';
+
+truncate table game;
+insert into game (Title, DateOfCompletion, Platform, Rate, Status) select 'Dead Space', '20050101', 1, 1, 1;
+insert into game (Title, DateOfCompletion, Platform, Rate, Status) select 'Call of Duty Modern Warfare I', '20071015', 1, 1, 1;
+insert into game (Title, DateOfCompletion, Platform, Rate, Status) select 'Warcraft 3', '20010702', 1, 2, 1;
+
+commit;
